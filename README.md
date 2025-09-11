@@ -1,28 +1,12 @@
 
 # SpaceX Falcon 9 Landing Prediction: Data and ML
 
-> **Project goal:** Predict whether the first stage of a SpaceX Falcon 9 rocket will land successfully. The project simulates a startup ("SpaceY") competing with SpaceX and uses historical launch data to build an end-to-end data science solution.
->
->  SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
-
-
----
+SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
 
 This repository contains the notebooks, data and code for the IBM Data Science capstone project. The aim is to collect SpaceX launch data (SpaceX REST API and public sources), clean and explore it, create interactive visualizations (Folium maps and a Plotly Dash dashboard), and build classification models to predict first-stage landing success.
 
+For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
-
-**Common features you'll see / create:**
-
-* `FlightNumber` (int) — mission/flight sequence
-* `LaunchSite` (categorical) — e.g., CCAFS LC-40, KSC LC-39A
-* `PayloadMass (kg)` (numeric) — payload mass
-* `Orbit` (categorical) — target orbit (LEO, GTO, SSO, etc.)
-* `BoosterVersion` / `BoosterVersionCategory` (categorical)
-* `Class` or `LandingOutcome` (binary target) — 1 = success, 0 = failure
-* `Date` / `Year` (datetime / int)
-
-*Feature engineering notes:* create `Year`/`Month`, bucket `PayloadMass`, one-hot encode categorical fields, and compute derived metrics such as previous-flight count for a booster.
 
 ---
 
@@ -92,10 +76,6 @@ Below is a practical workflow you can follow — each step corresponds to a note
 * Include the Dash app (or instructions for local deployment).
 
 ---
-
-
-
-For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
 
 ## References & Sources
