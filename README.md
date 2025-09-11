@@ -1,7 +1,10 @@
 
-# IBM Data Science Capstone — SpaceX Falcon 9 Landing Prediction
+# SpaceX Falcon 9 Landing Prediction: Data and ML
 
-> **Project goal:** Predict whether the first stage of a SpaceX Falcon 9 rocket will land successfully. The capstone simulates a startup ("SpaceY") competing with SpaceX and uses historical launch data to build an end-to-end data science solution.
+> **Project goal:** Predict whether the first stage of a SpaceX Falcon 9 rocket will land successfully. The project simulates a startup ("SpaceY") competing with SpaceX and uses historical launch data to build an end-to-end data science solution.
+>
+>  SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
+
 
 ---
 
@@ -96,10 +99,8 @@ Below is a practical workflow you can follow — each step corresponds to a note
 
 ### 9. Final report & deliverables
 
-* Final Jupyter notebook summarizing the approach, artifacts and results.
-* Export or serialize final model(s) (pickle / joblib) into `models/`.
-* Include the Folium map(s) and link to the Dash app (or instructions for local deployment).
-* Write a short conclusion and recommendations for stakeholders (e.g., which features most affect landing success).
+* Final report summarizing the approach, artifacts and results.
+* Include the Dash app (or instructions for local deployment).
 
 ---
 
@@ -123,52 +124,20 @@ ibm-spacex-capstone/
 └─ README.md
 ```
 
-## How to run (quickstart)
 
-```bash
-# create env & install
-python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
+For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
-# Jupyter
-jupyter notebook notebooks/1_data_collection.ipynb
-
-# Run dash app (local)
-cd dash
-python app.py
-# open http://127.0.0.1:8050 in your browser
-```
-
-## Tips & common pitfalls
-
-* Make sure to consistently interpret the target label: many students use `Class` or `LandingOutcome` and mix definitions. Document yours.
-* Imputation choices for `PayloadMass` can affect model performance — try mean, median, and model-based imputation.
-* One-hot encoding can explode dimensionality if you keep very granular categorical fields (e.g., many unique booster names). Consider grouping.
-* When comparing models, prefer stratified cross-validation if the target is imbalanced.
 
 ## Credits & references
 
-This project follows the IBM Data Science capstone template (SpaceX Falcon 9 first-stage landing prediction).
-
----
-
-If you want, I can also:
-
-* provide ready-to-copy badges and a short license header, or
-* generate a `requirements.txt` tuned for this project, or
-* convert this into a ready-to-paste `README.md` file in your repo.
 
 
 
 
 
-# SpaceX Data and ML
-
-In this project, we will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
 
 
-For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
+
 
 ## Authors
 
