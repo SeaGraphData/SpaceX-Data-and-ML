@@ -34,3 +34,4 @@ discussed below.
 |beautifulsoup4|4.12.3|MIT|https://pypi.org/project/beautifulsoup4/|
 |pandas|2.2.1|BSD-3|https://pandas.pydata.org|
 |numpy|1.3.0|BSD-3|https://numpy.org/doc/stable/index.html|
+|scikit-learn|1.7.1|BSD-3|https://scikit-learn.org/stable/|
