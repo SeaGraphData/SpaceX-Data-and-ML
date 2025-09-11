@@ -12,12 +12,7 @@
 
 This repository contains the notebooks, data and code for the IBM Data Science capstone project. The aim is to collect SpaceX launch data (SpaceX REST API and public sources), clean and explore it, create interactive visualizations (Folium maps and a Plotly Dash dashboard), and build classification models to predict first-stage landing success.
 
-## Datasets & key features
 
-**Raw data sources (typical):**
-
-* SpaceX REST API (launch records, rocket & core info)
-* Wikipedia tables / other public sources (used for additional fields or cross-checks)
 
 **Typical processed dataset(s):**
 
@@ -104,33 +99,15 @@ Below is a practical workflow you can follow — each step corresponds to a note
 
 ---
 
-## Typical repo structure
-
-```
-ibm-spacex-capstone/
-├─ data/
-│  ├─ raw/
-│  └─ processed/
-├─ notebooks/
-│  ├─ 1_data_collection.ipynb
-│  ├─ 2_data_wrangling.ipynb
-│  ├─ 3_eda.ipynb
-│  ├─ 4_mapping_folium.ipynb
-│  └─ 5_modeling.ipynb
-├─ dash/
-│  └─ app.py
-├─ models/
-├─ requirements.txt
-└─ README.md
-```
 
 
 For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
 
-## Credits & references
+## References & Sources
 
-
+*  [SpaceX REST API](https://github.com/r-spacex/SpaceX-API) (launch records, rocket & core info)
+* Wikipedia tables / other public sources (used for additional fields or cross-checks)
 
 
 
