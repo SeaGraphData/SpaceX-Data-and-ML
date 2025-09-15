@@ -11,7 +11,7 @@ This repository contains the notebooks, data and code for the project. The aim i
 
 The project begins with setting up a Github repository and creating a structured folder layout, with folders for data, notebooks, dashboards, models, and reports. At this stage, a requirements file and a README are added, where the project is divided in different modules.
 
-Next comes data collection. Launch data is pulled from the SpaceX REST API and stored in raw JSON format [(Module 1)](). Wikipedia tables or other sources can be used for complementary information. The raw JSON is flattened and converted to a tabular CSV for processing.
+Next comes data collection. Launch data is pulled from the SpaceX REST API and stored in raw JSON format [(Module 1, APIs)](https://github.com/SeaGraphData/SpaceX-Data-and-ML/blob/main/Jupyter%20Files%20and%20Data/Module%201%20Collect%20API%20jupyter-labs-spacex-data-collection-api.ipynb). Wikipedia tables or other sources can be used for complementary information. The raw JSON is flattened and converted to a tabular CSV for processing.
 
 The following phase is data wrangling and cleaning. This includes filtering for Falcon 9 launches, handling missing values such as payload mass, renaming fields for consistency, and creating the target label (success or failure). The cleaned dataset is saved for later use.
 
