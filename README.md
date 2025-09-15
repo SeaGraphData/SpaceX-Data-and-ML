@@ -9,7 +9,7 @@ This repository contains the notebooks, data and code for the IBM Data Science c
 
 ## Workflow
 
-The project begins with setting up a Git repository and creating a structured folder layout, with folders for data, notebooks, dashboards, models, and reports. At this stage, a requirements file and a README are added, and optionally the project can be set up in IBM Watson Studio or IBM Cloud.
+The project begins with setting up a Github repository and creating a structured folder layout, with folders for data, notebooks, dashboards, models, and reports. At this stage, a requirements file and a README are added, where the project is divided in different modules.
 
 Next comes data collection. Launch data is pulled from the SpaceX REST API and stored in raw JSON format. Wikipedia tables or other sources can be used for complementary information. The raw JSON is flattened and converted to a tabular CSV for processing.
 
@@ -30,7 +30,6 @@ The project concludes with a final report that summarizes the findings, includes
 
 For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
----
 
 
 ## References & Sources
