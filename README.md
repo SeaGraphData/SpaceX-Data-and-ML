@@ -23,7 +23,7 @@ After visualization, the focus shifts to feature engineering and machine learnin
 
 The models are then evaluated based on accuracy, precision, recall, F1-score, confusion matrices, and ROC-AUC. Stratified cross-validation is often used to handle class imbalance. The models are compared and the best performer is selected.
 
-The project concludes with a final report that summarizes the findings, includes the Jupyter notebooks, and provides artifacts such as the trained models, Folium maps, and the Dash app. Recommendations are presented to stakeholders, with insights into which features most influence landing success.
+The project concludes with a final report that summarizes the findings [(Report)](), includes the Jupyter notebooks, and provides artifacts such as the trained models, Folium maps, and the Dash app. Recommendations are presented to stakeholders, with insights into which features most influence landing success.
 
 
 For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
