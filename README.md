@@ -5,75 +5,34 @@ SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 mill
 
 This repository contains the notebooks, data and code for the IBM Data Science capstone project. The aim is to collect SpaceX launch data (SpaceX REST API and public sources), clean and explore it, create interactive visualizations (Folium maps and a Plotly Dash dashboard), and build classification models to predict first-stage landing success.
 
-For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
 
----
+## Workflow
+
+
 
 ## Step-by-step (lab-by-lab breakdown)
 
-Below is a practical workflow you can follow — each step corresponds to a notebook or a script in the repo.
+The project begins with setting up a Git repository and creating a structured folder layout, with folders for data, notebooks, dashboards, models, and reports. At this stage, a requirements file and a README are added, and optionally the project can be set up in IBM Watson Studio or IBM Cloud.
 
-### 1. Project setup
+Next comes data collection. Launch data is pulled from the SpaceX REST API and stored in raw JSON format. Wikipedia tables or other sources can be used for complementary information. The raw JSON is flattened and converted to a tabular CSV for processing.
 
-* Initialize a Git repository and create a structured folder layout (`data/`, `notebooks/`, `dash/`, `models/`, `reports/`).
-* Create a `requirements.txt` or `environment.yml` and a `README.md`.
-* (Optional) Set up IBM Watson Studio / IBM Cloud project if you plan to use IBM-hosted notebooks.
+The following phase is data wrangling and cleaning. This includes filtering for Falcon 9 launches, handling missing values such as payload mass, renaming fields for consistency, and creating the target label (success or failure). The cleaned dataset is saved for later use.
 
-### 2. Data collection
+Once the data is ready, exploratory data analysis (EDA) is performed. This step involves visualizing distributions of payloads and flight numbers, examining correlations between payload mass and landing success, and calculating success rates per launch site, orbit, and booster version. Both Pandas and visualization libraries like Matplotlib or Plotly are used here.
 
-* Use the SpaceX REST API to GET launch data (JSON). Save raw JSON responses to `data/raw/`.
-* Optionally scrape or copy relevant Wikipedia tables to get complementary fields (if needed).
-* Convert / flatten JSON to a tabular CSV (e.g. `data/processed/spacex_raw.csv`).
+The geospatial analysis follows with Folium maps. Launch sites and landing sites are plotted with markers, and additional information can be displayed in popups. The resulting maps are saved as HTML and can be shared or embedded.
 
-### 3. Data wrangling & cleaning
+The next major step is building an interactive dashboard with Plotly Dash. The dataset `spacex_launch_dash.csv` is used to create a web app where users can select launch sites and payload ranges, and see dynamic scatter plots and success rate charts. The app is run locally and accessible via a browser.
 
-* Filter to Falcon 9 launches if the exercise requires.
-* Handle missing values (e.g., impute `PayloadMass` with mean or median).
-* Normalize / rename fields to friendly column names (e.g., `Payload Mass (kg)` → `PayloadMassKg`).
-* Create the target label `Class` or boolean `LandingSuccess`.
-* Save cleaned dataset (e.g. `data/processed/spacex_clean.csv`).
+After visualization, the focus shifts to feature engineering and machine learning. Features are selected and prepared through scaling and one-hot encoding. The dataset is split into training and testing subsets, and several classification algorithms are trained, including Logistic Regression, SVM, KNN, Decision Trees, and Random Forests. Hyperparameters are tuned using grid search or cross-validation.
 
-### 4. Exploratory Data Analysis (EDA)
+The models are then evaluated based on accuracy, precision, recall, F1-score, confusion matrices, and ROC-AUC. Stratified cross-validation is often used to handle class imbalance. The models are compared and the best performer is selected.
 
-* Univariate: histograms of payload, flight counts by year.
-* Bivariate: payload vs. landing success; flight number vs. success rate.
-* Grouped: success rate per launch site, orbit, booster version.
-* Use Pandas, Matplotlib / Plotly for interactive charts.
+The project concludes with a final report that summarizes the findings, includes the Jupyter notebooks, and provides artifacts such as the trained models, Folium maps, and the Dash app. Recommendations are presented to stakeholders, with insights into which features most influence landing success.
 
-### 5. Geospatial visualizations (Folium)
 
-* Map launch sites and landing sites using Folium markers.
-* Add popup info and simple chloropleth or marker clusters where appropriate.
-* Save maps as HTML for inclusion in the report or dashboard.
-
-### 6. Interactive dashboard (Plotly Dash)
-
-* Prepare `spacex_launch_dash.csv` as the dataset for the Dash app.
-* Implement components: dropdown (launch site), range slider (payload), scatter/box charts, and callbacks to update figures.
-* Single-page Dash app typically contains:
-
-  * Launch site dropdown
-  * Payload range slider
-  * Success vs payload scatter + booster color
-* Provide instructions to run: `python app.py` (or `gunicorn` for production).
-
-### 7. Feature engineering & machine learning
-
-* Select features (numeric + one-hot categorical).
-* Split data into train/test (common: 70/30) and scale numeric features where needed.
-* Train classification models: Logistic Regression, SVM, K-Nearest Neighbors, Decision Trees, Random Forests. Use `GridSearchCV` or `cross_val_score` to tune hyperparameters.
-
-### 8. Model evaluation
-
-* Evaluate with accuracy, precision, recall, F1-score, confusion matrix, and ROC-AUC.
-* Use cross-validation to check generalization.
-* Compare models and choose the best performer.
-
-### 9. Final report & deliverables
-
-* Final report summarizing the approach, artifacts and results.
-* Include the Dash app (or instructions for local deployment).
+For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
 
 ---
 
