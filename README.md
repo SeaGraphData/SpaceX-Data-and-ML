@@ -21,7 +21,7 @@ The next major step is building an interactive dashboard with Plotly Dash [(Modu
 
 After visualization, the focus shifts to feature engineering and machine learning [(Module 4, Machine Learning Process)](https://github.com/SeaGraphData/SpaceX-Data-and-ML/blob/main/Jupyter%20Files%20and%20Data/Module%204%20SpaceX_Machine%20Learning%20Prediction_Part_5.ipynb). Features are selected and prepared through scaling and one-hot encoding. The dataset is split into training and testing subsets, and several classification algorithms are trained, including Logistic Regression, SVM, KNN, Decision Trees, and Random Forests. Hyperparameters are tuned using grid search or cross-validation. The models are then evaluated based on accuracy, precision, recall, F1-score, confusion matrices, and ROC-AUC. Stratified cross-validation is often used to handle class imbalance. The models are compared and the best performer is selected.
 
-The project concludes with a final report that summarizes the findings [(Report)](), includes the Jupyter notebooks, and provides artifacts such as the trained models, Folium maps, and the Dash app. Recommendations are presented to stakeholders, with insights into which features most influence landing success.
+The project concludes with a final report that summarizes the findings [(Report)](https://github.com/SeaGraphData/SpaceX-Data-and-ML/blob/main/SpaceX%20Capestone%20Project.pdf), includes the Jupyter notebooks, and provides artifacts such as the trained models, Folium maps, and the Dash app. Recommendations are presented to stakeholders, with insights into which features most influence landing success.
 
 
 For any questions about this repository, please contact me via juan.fernandez.sea@gmail.com
